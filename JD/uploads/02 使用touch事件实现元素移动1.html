@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .b_box {
+        width: 300px;
+        height: 300px;
+        border: 1px solid #ccc;
+        margin: 0 auto;
+
+    }
+    .s_box{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin: 0 auto;
+    }
+    </style>
+</head>
+<body>
+    <div class='b_box'>
+        <div class='s_box'></div>
+    </div>
+    <script>
+         var div = document.querySelector('div');
+        // 手指接触屏幕
+        div.addEventListener('touchstart',function(e){
+            console.log('toucheStart');
+            console.log(e);//TouchEvent{ touches targetTouches changedTouches};
+            // touches: 当前屏幕上所有的手指对象
+            // targetTouches: 当前排名目标元素上的手指对象
+            // changedTouches: 当前屏幕上增加或减少的手指对象
+            // touches和targetTouches 一般情况无差别,但推荐使用targetTouches
+            console.log(e.touches);
+            console.log(e.targetTouches);
+            console.log(e.changedTouches);
+           
+           
+            // 位置: 
+          /*   clientX/Y : 手指的触摸点相对于视口(可视区域)左上角的坐标
+            screenX/Y : 手指的触摸点相对于屏幕左上角的坐标
+            pageX/Y : 手指的触摸点相对于当前页面内容左上角的坐标,内容宽度大于屏幕宽度,会有滚动条的情况
+            */
+            console.log(e.touches.clientX);
+            console.log(e.touches.clientY);
+
+
+        })
+    
+    </script>
+</body>
+</html>

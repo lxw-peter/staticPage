@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+       <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+   
+    div{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        /* margin: 0 auto; */
+    }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div');
+        var startX,startY;
+            // 触摸事件开始
+
+        div.addEventListener('touchstart',function(e){
+            startX = e.targetTouches[0].clientX;
+            startY = e.targetTouches[0].clientY;
+            console.log(startX,startY);
+
+        })
+            // 滑动操作进行中
+        div.addEventListener('touchmove',function(e){
+            // 移动后的坐标
+            var moveX = e.targetTouches[0].clientX;
+            var moveY = e.targetTouches[0].clientY;
+            // 移动后的坐标与其实坐标的差值
+            var distanceX = moveX - startX;
+            var distanceY = moveY - startY;
+            //设置偏移量
+            div.style.transform = "translate("+distanceX+"px,"+distanceY+"px)";
+        })
+            // 触摸事件结束
+        // div.addEventListener('touchend',function(e){
+        //     // startX = e.targetTouches[0].clientX;
+        //     // startY = e.targetTouches[0].clientY;
+            
+        // })
+    </script>
+</body>
+</html>

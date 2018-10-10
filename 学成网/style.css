@@ -1,0 +1,402 @@
+       
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		 body {
+			background-color: #f3f5f7;
+		
+		}
+		ul {
+			list-style: none;
+		}
+		.clearfix: befor,.clearfix: after { /*清除浮动*/
+			display: table;
+			content: "";
+		}
+		.clearfix {
+			*zoom: 1;
+		}
+		a {
+			color: #050505;/*字体颜色*/
+			text-decoration: none;/*去掉横线*/
+
+		}
+		input {
+			border: 0;
+			box-sizing: border-box;
+
+		}
+		.container {
+			width: 1200px;
+			margin: 0 auto;
+		}
+		/*css初始化结束*/
+		/*页面头部*/
+		header {/*头部*/
+			
+			height: 100px;
+			background-color: #f3f5f7;
+			overflow:hidden;
+			/*防止外边距合并整体下沉问题*/
+		
+			
+		}
+		nav {/*导航栏*/
+			width: 1366px;
+			height: 42px;
+			background-color: #f3f5f7;
+			margin:26px auto;/*盒子水平居中*/
+		}
+		.logo {
+			float: left;
+		}
+		.navbar {
+			float:left;
+			height: 42px;
+			line-height: 42px;
+			margin-left: 60px;
+		}
+		.navbar li {
+			float: left;
+
+		}
+		.navbar li a {
+			padding: 0 8px;/*上下边距0，左右边距8px*/
+			display: inline-block;给行内元素设置高度需要转换为块级
+			/* height: 42px; */
+		}
+		.navbar li a:hover {
+			border-bottom: 2px solid #00a4ff;
+		}
+		/*搜索框部分*/
+		.search {
+			width: 408px;
+			height: 40px;
+			border:1px solid #00a4ff;
+			float: right;
+			margin-right: 50px; 
+			
+		}
+		.search input[type=text] {
+			width: 358px;
+			height: 40px;
+			padding-left: 20px;
+			float: left;
+			background-color: #f3f5f7;
+		}
+		.search input[type=submit]{
+			width: 50px;
+			height: 40px;
+			/*background-color: #00a4ff;*/
+			background: #00a4ff url(images/search_03.png) center center no-repeat ;
+			
+			float: right;
+		}
+		/*搜索框部分结束*/
+		/*个人中心部分*/
+		.personal {
+			float: right;
+			height: 42px;
+			line-height: 42px;
+			
+		}
+		.personal img {
+			vertical-align: middle;/*图片和文字中线对齐*/
+		}
+		.personal a:first-child img {
+			margin: 0 30px 0 30px;
+		}
+		.personal a:last-child img {
+			border-radius: 50%;/*修改图片形状为圆形*/
+			margin-right: 5px;
+		}
+		/*个人中心部分结束*/
+		/*baner开始*/
+		.banner {
+			height: 420px;
+			background-color: #1c036c;
+
+		}
+		.banner-in {
+			height: 420px;
+			background: url(images/banner2.png) 0 0 no-repeat;
+			position: relative;
+		}
+		/*侧边栏部分*/
+		.slidebar {
+			width: 190px;
+			height: 420px;
+			background-color: rgba(0,0,0,0.3);
+			float: left;
+
+		}
+		.slidebar li a {
+			font-size: 14px;
+			color: #fff;
+			height: 45px;
+			display: block;/*a是行内元素，没有大小需要转换*/
+			line-height: 45px; 
+			padding: 0 20px;
+			
+		}
+		.slidebar li a span {
+			font-family: arial;/*一般情况下字符用Arial字体*/
+			float: right;
+		}
+		.slidebar li a:hover {
+			color:  #00a4ff
+		}
+		/*课程表部分*/
+		.timetable {
+			width: 230px;
+			height: 300px;
+			background-color: #fff;
+			float: right;
+			margin-top:50px;
+
+		}
+		.timetable dt {
+			width: 230px;
+			height: 50px;
+			color: #fff;
+			background-color: #9bceea;
+			text-align:center;/*文字水平居中*/
+			line-height: 50px;/*文字垂直居中*/
+			font-size: 20px;  
+			font-weight: 700;/*文字加粗*/
+			letter-spacing: 2px;
+			margin-bottom: 5px; 
+		}
+		.timetable dd {
+			width: 193px;
+			height: 60px;
+			border-bottom: 1px solid #ccc;
+			margin: 0 auto;
+			padding-top: 10px ;
+			box-sizing: border-box;/*防止外边距合并整体下沉问题
+*/
+		}
+		.timetable dd:last-child {
+			border:0;
+
+		}
+		.timetable dd h4 {
+			font-weight: normal;/*正常字体粗细*/
+			font-size: 16px;
+			color: #5a5a5a;
+		}
+		.timetable dd p {
+			font-size: 12px;
+			color: #a5a5a5;
+		}
+		.timetable dd a {
+			font-size: 16px;
+			width: 200px;
+			height: 40px;
+			display: block;/*a是行内元素，没有大小需要转换*/
+			line-height: 45px; 
+			border:1px solid #22b0ff;
+			text-align: center;
+			line-height: 40px;
+			color:#22b0ff;
+			font-weight: 700;
+			transition: all 0.5s;/*增加动画效果*/
+		}
+		.timetable dd a:hover {
+			color: #fff;
+			background-color: #22b0ff;
+		}
+		/*小圆点部分开始*/
+		.circle {
+			position: absolute;
+			width: 170px;
+			height: 12px;
+			
+			bottom: 34px;
+			left: 50%;
+			margin-left: -85px;
+
+		}
+		.circle li {
+			float: left;
+			display: block;
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			margin: 0 7px;
+			background-color: rgba(255,255,255,0.2);
+		}
+		.circle li:first-child {
+			width: 19px;
+			height: 12px;
+			background-color: #FAFAFA;
+			border-radius: 7px;
+		}
+		/*精彩推荐部分*/
+		.recommend {
+			
+			height: 60px;
+			line-height: 60px;
+			background-color: #fff;
+			margin-top: 8px;
+			box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+			/*盒子阴影：水平 垂直 模糊距离 阴影颜色和透明度*/
+			
+		}
+		.recommend ul li {
+			float: left;
+
+		}
+		.recommend a {
+			
+			padding:0 30px;
+			border-right: 1px solid #ccc;
+
+		}
+		.recommend a:hover{
+			color: #22b0ff;
+		}
+		.recommend li:first-child a{
+			color: #22b0ff;
+		}
+		.recommend li:last-child {
+			float: right;
+
+		}
+		.recommend li:nth-child(7) a{
+			border: 0;
+		}
+
+		.recommend li:last-child a{
+			border: 0;
+			
+			font-size:14px;
+			color: #22b0ff;
+		}
+		/*精品推荐大模块部分*/
+		.commendation {
+			height: 595px;
+			margin-top: 30px;
+		}
+		.commendation .top {
+			height: 25px;
+			line-height: 25px;
+		}
+		.commendation .top h4 {
+			font-size: 20px;
+			color: #494949;
+			display: inline-block;/*指定元素为内联块元素*/
+		}
+		.commendation .top a {
+			
+			font-size: 12px;
+			float: right;
+			color: #a5a5a5;
+			margin-right: 16px;
+		}
+		.commendation .top a:hover {
+			color: #00a4ff;
+		}
+		.commendation .main {
+			height: 555px;
+			margin-top: 5px;	
+		}
+		.main ul li{
+			width: 228px;
+			height: 270px;
+			background-color: #fff;
+			overflow: hidden;/*溢出部分隐藏*/
+			float: left;
+			margin:15px 15px 0 0;
+			transition: all 0.2s;
+			
+		}
+		.main ul li:hover {
+			box-shadow: 0 3px 2px 2px rgba(0,0,0,0.1);
+			margin-top: 10px;
+		}
+		.main ul li:nth-child(5n){/*5n表示5的倍数即第五个和第十个*/
+			margin-right: 0px;
+		}
+		.main li h4,
+		.main li p {
+			padding: 0 20px 0 28px;
+		}
+		.main li h4 {
+			color: #050505;
+			font-weight:normal;
+			font-size: 14px;
+			padding-top: 15px;
+		}
+		.main li p {
+			color: #999999;
+			font-size: 12px;
+			padding-top: 20px;
+		}
+		.main li p span {
+			color: #ff7c2d;
+		}
+		footer {
+			height: 273px;
+			background-color: #fff;
+			margin-top: 100px;
+			
+		}
+		.footer-in {
+			padding-top: 30px;
+		}
+		.footer-l {
+			float: left;
+		}
+		.footer-l p{
+			font-size: 12px;
+			color: #666666;
+			margin-top: 25px;
+		}
+		.footer-l a {
+			width: 120px;
+			height: 35px;
+			display: block;
+			border: 1px solid #00a4ff;
+			color: #00a4ff;
+			font-size: 16px;
+			line-height: 35px;
+			text-align: center;
+			margin-top: 15px;
+		}
+		.footer-r {
+			float: right;
+		}
+		.footer-r dl {
+			float: left;
+			width: 225px;
+		}
+		.footer-r dl a:hover {
+			color: #00a4ff;
+			text-decoration: underline;
+		}
+		.footer-r dl:last-child {
+
+			width: 95px;
+		}
+		.footer-r dt {
+			font-size: 16px;
+			color: #7d7d7d;
+			line-height: 30px;
+		}
+		.footer-r dd {
+			font-size: 12px;
+			color: #333333;
+			line-height: 21px;
+		}
+		
+
+
+		
+
+
+
+
+		
+	

@@ -1,0 +1,222 @@
+.mhome {
+    width: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    background-color: #F5F5F5;
+    /* position: relative; */
+}
+/* ------------------------------------搜索框 */
+.jd_search {
+    width: 100%;
+    height: 40px;
+    max-width: 640px;
+    /* background: linear-gradient(rgba(0,0,0,0.9),rgba(150,150,150,.5));颜色过度效果 */
+    background: rgba(255, 0, 0, 0);
+    position: fixed;
+    z-index: 999;
+}
+.jd_logo {
+    width: 56px;
+    height: 30px;
+    background: url(../images/jd-sprites.png) no-repeat 0 -109px;
+    background-size: 200px 200px;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+.jd_message {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    right: 0px;
+    top: 0px;
+    position: absolute;
+    color: #ddd;
+}
+.jd_searchBox {
+    width: 100%;
+    height: 100%;
+    padding-left: 76px;
+    padding-right: 50px;
+}
+.jd_searchBox>input {
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 15px;
+    color: #666;
+    padding-left: 30px;
+}
+/* 使用伪元素添加放大镜 */
+.jd_searchBox::before {
+    content: '';
+    width: 25px;
+    height: 30px;
+    background: url(../images/jd-sprites.png) no-repeat -58px -109px;
+    background-size: 200px 200px;
+    top: 11px;
+    left: 82px;
+    position: absolute;
+}
+/* 轮播图 */
+.jd_banner {
+    width: 100%;
+    /* max-width: 640px; */
+    overflow: hidden;
+    position: relative;
+}
+.jd_bannerImg {
+    /* width: 800%; */
+    width: 1000%;
+    position: relative;
+    /* left: -100%; */
+}
+
+.jd_bannerImg>li {
+    width: 10%;
+    float: left;
+
+}
+.jd_bannerImg>li img {
+    width: 100%;
+    display: block;
+}
+.jd_bannerIndicator {
+    width: 124px;
+    height: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.jd_bannerIndicator>li {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    float: left;
+    margin-left: 10px;
+}
+.jd_bannerIndicator>li.action {
+    background-color: #fff;
+}
+.jd_bannerIndicator>li:first-of-type {
+    margin-left: 0;
+}
+/* 导航栏部分 */
+.jd_nav {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.jd_nav  li {
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin-top: 5px;
+}
+.jd_nav  li img {
+    width: 50px;
+}
+.jd_nav  li p {
+    line-height: 25px;
+}
+.jd_productBox {
+    border: 1px solid #ccc;
+    border-left: none;
+    border-top: none;
+    box-shadow: 0px 1px 0px #ccc;
+    margin-top: 10px;
+}
+
+.jd_secKill {
+    width: 100%;
+    height: 30px;
+    background-color: #fff;
+    line-height: 30px;
+    
+    
+}
+.jd_sLeft {
+    float: left;
+    
+}
+.jd_skIcon {
+    width: 18px;
+    height: 30px;
+    background: url(../images/jd-sprites.png) no-repeat -84px -109px;
+    background-size: 200px 200px;
+    /* margin-left: 10px; */
+}
+.jd_sk_txt {
+    color: red;
+}
+.jd_countdown span{
+    background-color: #000;
+    color: #fff;
+    font-size: 13px;
+    width: 13px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    display: inline-block;
+}
+.jd_countdown span:nth-last-of-type(3n) {
+    background-color: transparent;/* 透明色 */
+    color: #000;
+    width: 8px;
+}
+.jd_pContent {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+   
+}
+.jd_pContent li {
+    width: 33%;
+    float: left;
+    text-align: center;
+}
+.jd_pContent li img {
+    width: 120px;
+    margin: 0 auto;
+}
+.jd_title > h3 {
+    line-height: 30px;
+    width: 100%;
+    height: 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+.jd_title > h3::before {
+    content: '';
+    width: 3px;
+    height: 12px;
+    position: absolute;
+    top: 9px;
+    left: -10px;
+    background-color: red;
+}
+.a_50 {
+    width: 50%;
+    display:block;
+}
+.a_50>img {
+    width: 100%;
+    display: block;
+}
+.b_right {
+    border-right: 1px solid #ccc;
+}
+.b-bottom {
+    border-bottom: 1px solid #ccc;
+}
+.b-left {
+    border-left: 1px solid #ccc;
+}
+.jd_pSubtance {
+    box-shadow: 1px solid #ccc;
+}

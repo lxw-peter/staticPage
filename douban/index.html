@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>豆瓣电影</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/cityChoose.css">
+    <link rel="stylesheet" href="css/review.css">
+	<script src="js/jquery-1.12.2.js"></script>
+    <script type="text/javascript" src="js/cityChoose.js"></script>
+    <script src="js/renderview.js"></script>
+    <script src='js/common.js'></script>
+    <script src="js/review.js"></script>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <div id="global-nav">
+        <div class="db">
+            <div class="top-nav-dbinfo">
+                <a href="#">登录</a>
+                <a href="#">注册</a>
+            </div>
+            <div class="top-nav-dbapp">
+                <a href="#">下载豆瓣客户端</a>
+            </div>
+            
+            <div class="item">
+                <ul>
+                    <li><a href="#">豆瓣</a></li>
+                    <li><a href="#">读书</a></li>
+                    <li><a href="#">电影</a></li>
+                    <li><a href="#">音乐</a></li>
+                    <li><a href="#">同城</a></li>
+                    <li><a href="#">小组</a></li>
+                    <li><a href="#">阅读</a></li>
+                    <li><a href="#">FM</a></li>
+                    <li><a href="#">时间</a></li>
+                    <li><a href="#">市集</a></li>
+                    <li><a href="#">更多</a></li>
+                </ul>
+               
+            </div>
+            
+            <div></div>
+        </div>
+    </div>
+        <!--  豆瓣电影页面导航栏 -->
+    <div id="db-movie-nav" class="nav">
+        <div class='nav-wrapper'>
+            <div class="container">
+             <!-- logo -->
+            <div class='logo'>
+            <a href="#">豆瓣电影</a>
+            </div>
+            <!-- 搜索框 -->
+            <form action=""> 
+                <input type="text"class='search' id='search' placeholder="搜索电影,电视剧,综艺,影人">
+                <input type="submit" value="">
+            </form>
+
+            </div>
+          
+        </div>
+        <!-- 豆瓣电影第二导航栏 -->
+        <div class="nav-secondary">
+            <div class="nav-item">
+                <ul>
+                    <li><a href="javascript:void(0)" class = 'nav_a'>影讯&购票</a></li>
+                    <li><a href="#">电影 </a></li>
+                    <li><a href="#">电视剧</a></li>
+                    <li><a href="#">电视剧</a></li>
+                    <li><a href="#">分类</a></li>
+                    <li><a href="javascript:void(0)"class='nav_a'>影评</a></li>
+                    <li><a href="#">2017年度榜单</a></li>
+                    <li><a href="#">2017观影报告</a></li>
+                </ul>
+            </div>
+   
+        </div>
+    </div>
+    <div id="wrapper">
+        <div class="content">
+            <div class='main'>
+                <!-- 影讯&购票 -->
+                <div class="article">
+                    <div class='header'>
+                    <h1>电影票 -<span id="city">北京</span></h1>
+                    <!-- 下面代码来源于插件 -->
+                    <a id="place" href="javascript:void(0)">[切换城市]</a>
+                    <!-- <input type="text" placeholder="[切换城市]" id="place"> -->
+                    <div id="in_city" style="display: none"></div>
+
+                    </div>
+                    <div class='movie-ad'><a href="#"><img src="images/movie-ad.jpg" alt=""></a></div>
+                    <div class='now-playing'>
+                        <div class='hs'>
+                        <h2>正在上映</h2>
+                        </div>
+                        <div class="mod-bd">
+                            <ul class='lists'>
+                                <!-- <li class='list-item'>
+                                    <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul>
+                                </li>
+                                <li class='list-item'> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class='list-item'> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class='list-item'> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class='list-item'> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class='list-item'> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class='list-item'> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class='list-item'> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class='list-item'> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class='list-item'> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class='list-item'> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class='list-item'> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class='list-item'> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class='list-item'> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class='list-item'> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class='more' id='getMoreDate'>显示全部影片</div>
+                    <div class='coming-soon'>
+                        <div class="hs">
+                            <h2>即将上映<a href='#'>全部»</a></h2>
+                        </div>
+                        <div class="mod-bd">
+                            <ul class="lists">
+                                <!-- <li class="list-item"> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class="list-item"> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class="list-item"> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class="list-item"> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class="list-item"> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class="list-item"> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class="list-item"> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class="list-item"> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class="list-item"> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li>
+                                <li class="list-item"> <ul>
+                                        <li class='poster'><a href="#"><img src="images/movie1.webp" alt=""></a></li>
+                                        <li class='title'>
+                                            <a href="#">侏罗纪世界2</a>
+                                        </li>
+                                        <li class='staring'>
+                                            <span class="rating-start">★★★★★</span>
+                                            <span class="s-rate"> 10.0</span>
+                                        </li>
+                                        <li class='sbtn'><a href="#">选座购票</a></li>
+                                    </ul></li> -->
+                            </ul>
+                        </div>
+                </div>
+                </div>
+
+                <!-- 影评栏 -->
+                <div class='review' >
+                    
+                    <div class='review_article'>
+                        <div class="header">
+                            <h1>豆瓣最受欢迎的影评</h1>   
+                        </div>
+                        <div>
+                            <a id='welcome'>最受欢迎的</a>
+                            <a id='up_to_date'>/新片评论</a>
+                        </div>
+                        <!-- 最受欢迎的评论,默认显示 -->
+                        <div class="review_item show">
+                            <ul>
+                                <li class='review_item_list'>
+                                    <img src="images/movie2.webp" alt="">
+                                    <div class='list_info'>
+                                        <ul>
+                                            <li>
+                                                <div class='main_hd'>
+                                                    <img src="images/u_head.jpg" alt="">
+                                                    <a href='#'>电影幕后的故事</a>
+                                                    <span>☆☆☆☆☆</span>
+                                                    <p>2018-06-18 10:33:47</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">今年才过一半，年度最烂就诞生了</a>
+                                            </li>
+                                            <li>
+                                                <div>这篇影评可能有剧透<br>本文首发于电影幕后故事微信公众号
+                                                （微信号“saymovie”），欢迎关注，看幕后君第一时间为你评新片，
+                                                品经典。 对，我就是要骂《猛虫过江》 看电影之前，我问同事们谁
+                                                愿意陪我一起去看？我请客 大家都说不了不了挺忙的。 我觉得一定
+                                                是诱惑力不够，于是加码说看完我还请吃饭。 大...<br> 
+                                                <a href="#">(展开)</a></div>
+                                                
+                                            </li>
+                                            <li>
+                                                <a>△<span>67</span></a>
+                                                <a>▽<span>8</span></a>
+                                                <a href="#"><span>18</span>回应</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class='review_item_list'> <img src="images/movie2.webp" alt="">
+                                    <div class='list_info'>
+                                        <ul>
+                                            <li>
+                                                <div class='main_hd'>
+                                                    <img src="images/u_head.jpg" alt="">
+                                                    <a href='#'>电影幕后的故事</a>
+                                                    <span>☆☆☆☆☆</span>
+                                                    <p>2018-06-18 10:33:47</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">今年才过一半，年度最烂就诞生了</a>
+                                            </li>
+                                            <li>
+                                                <div>这篇影评可能有剧透<br>本文首发于电影幕后故事微信公众号
+                                                （微信号“saymovie”），欢迎关注，看幕后君第一时间为你评新片，
+                                                品经典。 对，我就是要骂《猛虫过江》 看电影之前，我问同事们谁
+                                                愿意陪我一起去看？我请客 大家都说不了不了挺忙的。 我觉得一定
+                                                是诱惑力不够，于是加码说看完我还请吃饭。 大...<br> 
+                                                <a href="#">(展开)</a></div>
+                                                
+                                            </li>
+                                            <li>
+                                                <a>△<span>67</span></a>
+                                                <a>▽<span>8</span></a>
+                                                <a href="#"><span>18</span>回应</a>
+                                            </li>
+                                        </ul>
+                                    </div></li>
+                                <li class='review_item_list'> <img src="images/movie2.webp" alt="">
+                                    <div class='list_info'>
+                                        <ul>
+                                            <li>
+                                                <div class='main_hd'>
+                                                    <img src="images/u_head.jpg" alt="">
+                                                    <a href='#'>电影幕后的故事</a>
+                                                    <span>☆☆☆☆☆</span>
+                                                    <p>2018-06-18 10:33:47</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">今年才过一半，年度最烂就诞生了</a>
+                                            </li>
+                                            <li>
+                                                <div>这篇影评可能有剧透<br>本文首发于电影幕后故事微信公众号
+                                                （微信号“saymovie”），欢迎关注，看幕后君第一时间为你评新片，
+                                                品经典。 对，我就是要骂《猛虫过江》 看电影之前，我问同事们谁
+                                                愿意陪我一起去看？我请客 大家都说不了不了挺忙的。 我觉得一定
+                                                是诱惑力不够，于是加码说看完我还请吃饭。 大...<br> 
+                                                <a href="#">(展开)</a></div>
+                                                
+                                            </li>
+                                            <li>
+                                                <a>△<span>67</span></a>
+                                                <a>▽<span>8</span></a>
+                                                <a href="#"><span>18</span>回应</a>
+                                            </li>
+                                        </ul>
+                                    </div></li>
+                                <li class='review_item_list'> <img src="images/movie2.webp" alt="">
+                                    <div class='list_info'>
+                                        <ul>
+                                            <li>
+                                                <div class='main_hd'>
+                                                    <img src="images/u_head.jpg" alt="">
+                                                    <a href='#'>电影幕后的故事</a>
+                                                    <span>☆☆☆☆☆</span>
+                                                    <p>2018-06-18 10:33:47</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">今年才过一半，年度最烂就诞生了</a>
+                                            </li>
+                                            <li>
+                                                <div>这篇影评可能有剧透<br>本文首发于电影幕后故事微信公众号
+                                                （微信号“saymovie”），欢迎关注，看幕后君第一时间为你评新片，
+                                                品经典。 对，我就是要骂《猛虫过江》 看电影之前，我问同事们谁
+                                                愿意陪我一起去看？我请客 大家都说不了不了挺忙的。 我觉得一定
+                                                是诱惑力不够，于是加码说看完我还请吃饭。 大...<br> 
+                                                <a href="#">(展开)</a></div>
+                                                
+                                            </li>
+                                            <li>
+                                                <a>△<span>67</span></a>
+                                                <a>▽<span>8</span></a>
+                                                <a href="#"><span>18</span>回应</a>
+                                            </li>
+                                        </ul>
+                                    </div></li>
+                                <li class='review_item_list'> <img src="images/movie2.webp" alt="">
+                                    <div class='list_info'>
+                                        <ul>
+                                            <li>
+                                                <div class='main_hd'>
+                                                    <img src="images/u_head.jpg" alt="">
+                                                    <a href='#'>电影幕后的故事</a>
+                                                    <span>☆☆☆☆☆</span>
+                                                    <p>2018-06-18 10:33:47</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">今年才过一半，年度最烂就诞生了</a>
+                                            </li>
+                                            <li>
+                                                <div>这篇影评可能有剧透<br>本文首发于电影幕后故事微信公众号
+                                                （微信号“saymovie”），欢迎关注，看幕后君第一时间为你评新片，
+                                                品经典。 对，我就是要骂《猛虫过江》 看电影之前，我问同事们谁
+                                                愿意陪我一起去看？我请客 大家都说不了不了挺忙的。 我觉得一定
+                                                是诱惑力不够，于是加码说看完我还请吃饭。 大...<br> 
+                                                <a href="#">(展开)</a></div>
+                                                
+                                            </li>
+                                            <li>
+                                                <a>△<span>67</span></a>
+                                                <a>▽<span>8</span></a>
+                                                <a href="#"><span>18</span>回应</a>
+                                            </li>
+                                        </ul>
+                                    </div></li>
+                                <li class='review_item_list'> <img src="images/movie2.webp" alt="">
+                                    <div class='list_info'>
+                                        <ul>
+                                            <li>
+                                                <div class='main_hd'>
+                                                    <img src="images/u_head.jpg" alt="">
+                                                    <a href='#'>电影幕后的故事</a>
+                                                    <span>☆☆☆☆☆</span>
+                                                    <p>2018-06-18 10:33:47</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">今年才过一半，年度最烂就诞生了</a>
+                                            </li>
+                                            <li>
+                                                <div>这篇影评可能有剧透<br>本文首发于电影幕后故事微信公众号
+                                                （微信号“saymovie”），欢迎关注，看幕后君第一时间为你评新片，
+                                                品经典。 对，我就是要骂《猛虫过江》 看电影之前，我问同事们谁
+                                                愿意陪我一起去看？我请客 大家都说不了不了挺忙的。 我觉得一定
+                                                是诱惑力不够，于是加码说看完我还请吃饭。 大...<br> 
+                                                <a href="#">(展开)</a></div>
+                                                
+                                            </li>
+                                            <li>
+                                                <a>△<span>67</span></a>
+                                                <a>▽<span>8</span></a>
+                                                <a href="#"><span>18</span>回应</a>
+                                            </li>
+                                        </ul>
+                                    </div></li>
+                                <li class='review_item_list'> <img src="images/movie2.webp" alt="">
+                                    <div class='list_info'>
+                                        <ul>
+                                            <li>
+                                                <div class='main_hd'>
+                                                    <img src="images/u_head.jpg" alt="">
+                                                    <a href='#'>电影幕后的故事</a>
+                                                    <span>☆☆☆☆☆</span>
+                                                    <p>2018-06-18 10:33:47</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">今年才过一半，年度最烂就诞生了</a>
+                                            </li>
+                                            <li>
+                                                <div>这篇影评可能有剧透<br>本文首发于电影幕后故事微信公众号
+                                                （微信号“saymovie”），欢迎关注，看幕后君第一时间为你评新片，
+                                                品经典。 对，我就是要骂《猛虫过江》 看电影之前，我问同事们谁
+                                                愿意陪我一起去看？我请客 大家都说不了不了挺忙的。 我觉得一定
+                                                是诱惑力不够，于是加码说看完我还请吃饭。 大...<br> 
+                                                <a href="#">(展开)</a></div>
+                                                
+                                            </li>
+                                            <li>
+                                                <a>△<span>67</span></a>
+                                                <a>▽<span>8</span></a>
+                                                <a href="#"><span>18</span>回应</a>
+                                            </li>
+                                        </ul>
+                                    </div></li>
+                                <li class='review_item_list'> <img src="images/movie2.webp" alt="">
+                                    <div class='list_info'>
+                                        <ul>
+                                            <li>
+                                                <div class='main_hd'>
+                                                    <img src="images/u_head.jpg" alt="">
+                                                    <a href='#'>电影幕后的故事</a>
+                                                    <span>☆☆☆☆☆</span>
+                                                    <p>2018-06-18 10:33:47</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">今年才过一半，年度最烂就诞生了</a>
+                                            </li>
+                                            <li>
+                                                <div>这篇影评可能有剧透<br>本文首发于电影幕后故事微信公众号
+                                                （微信号“saymovie”），欢迎关注，看幕后君第一时间为你评新片，
+                                                品经典。 对，我就是要骂《猛虫过江》 看电影之前，我问同事们谁
+                                                愿意陪我一起去看？我请客 大家都说不了不了挺忙的。 我觉得一定
+                                                是诱惑力不够，于是加码说看完我还请吃饭。 大...<br> 
+                                                <a href="#">(展开)</a></div>
+                                                
+                                            </li>
+                                            <li>
+                                                <a>△<span>67</span></a>
+                                                <a>▽<span>8</span></a>
+                                                <a href="#"><span>18</span>回应</a>
+                                            </li>
+                                        </ul>
+                                    </div></li>
+                                <li class='review_item_list'> <img src="images/movie2.webp" alt="">
+                                    <div class='list_info'>
+                                        <ul>
+                                            <li>
+                                                <div class='main_hd'>
+                                                    <img src="images/u_head.jpg" alt="">
+                                                    <a href='#'>电影幕后的故事</a>
+                                                    <span>☆☆☆☆☆</span>
+                                                    <p>2018-06-18 10:33:47</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">今年才过一半，年度最烂就诞生了</a>
+                                            </li>
+                                            <li>
+                                                <div>这篇影评可能有剧透<br>本文首发于电影幕后故事微信公众号
+                                                （微信号“saymovie”），欢迎关注，看幕后君第一时间为你评新片，
+                                                品经典。 对，我就是要骂《猛虫过江》 看电影之前，我问同事们谁
+                                                愿意陪我一起去看？我请客 大家都说不了不了挺忙的。 我觉得一定
+                                                是诱惑力不够，于是加码说看完我还请吃饭。 大...<br> 
+                                                <a href="#">(展开)</a></div>
+                                                
+                                            </li>
+                                            <li>
+                                                <a>△<span>67</span></a>
+                                                <a>▽<span>8</span></a>
+                                                <a href="#"><span>18</span>回应</a>
+                                            </li>
+                                        </ul>
+                                    </div></li>
+                                <li class='review_item_list'> <img src="images/movie2.webp" alt="">
+                                    <div class='list_info'>
+                                        <ul>
+                                            <li>
+                                                <div class='main_hd'>
+                                                    <img src="images/u_head.jpg" alt="">
+                                                    <a href='#'>电影幕后的故事</a>
+                                                    <span>☆☆☆☆☆</span>
+                                                    <p>2018-06-18 10:33:47</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">今年才过一半，年度最烂就诞生了</a>
+                                            </li>
+                                            <li>
+                                                <div>这篇影评可能有剧透<br>本文首发于电影幕后故事微信公众号
+                                                （微信号“saymovie”），欢迎关注，看幕后君第一时间为你评新片，
+                                                品经典。 对，我就是要骂《猛虫过江》 看电影之前，我问同事们谁
+                                                愿意陪我一起去看？我请客 大家都说不了不了挺忙的。 我觉得一定
+                                                是诱惑力不够，于是加码说看完我还请吃饭。 大...<br> 
+                                                <a href="#">(展开)</a></div>
+                                                
+                                            </li>
+                                            <li>
+                                                <a>△<span>67</span></a>
+                                                <a>▽<span>8</span></a>
+                                                <a href="#"><span>18</span>回应</a>
+                                            </li>
+                                        </ul>
+                                    </div></li>
+                            </ul>
+                        </div>
+                        <!-- 最新评论,默认隐藏 -->
+                        <div class="review_item hidden">
+                            <ul>
+                                <li class='review_item_list'>
+                                    <img src="images/movie1.webp" alt="">
+                                    <div class='list_info'>
+                                        <ul>
+                                            <li>
+                                                <div class='main_hd'>
+                                                    <img src="images/u_head.jpg" alt="">
+                                                    <a href='#'>电影幕后的故事</a>
+                                                    <span>☆☆☆☆☆</span>
+                                                    <p>2018-06-18 10:33:47</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">今年才过一半，年度最烂就诞生了</a>
+                                            </li>
+                                            <li>
+                                                <div>这篇影评可能有剧透<br>本文首发于电影幕后故事微信公众号
+                                                （微信号“saymovie”），欢迎关注，看幕后君第一时间为你评新片，
+                                                品经典。 对，我就是要骂《猛虫过江》 看电影之前，我问同事们谁
+                                                愿意陪我一起去看？我请客 大家都说不了不了挺忙的。 我觉得一定
+                                                是诱惑力不够，于是加码说看完我还请吃饭。 大...<br> 
+                                                <a href="#">(展开)</a></div>
+                                                
+                                            </li>
+                                            <li>
+                                                <a>△<span>67</span></a>
+                                                <a>▽<span>8</span></a>
+                                                <a href="#"><span>18</span>回应</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class='review_item_list'> <img src="images/movie2.webp" alt="">
+                                    <div class='list_info'>
+                                        <ul>
+                                            <li>
+                                                <div class='main_hd'>
+                                                    <img src="images/u_head.jpg" alt="">
+                                                    <a href='#'>电影幕后的故事</a>
+                                                    <span>☆☆☆☆☆</span>
+                                                    <p>2018-06-18 10:33:47</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">今年才过一半，年度最烂就诞生了</a>
+                                            </li>
+                                            <li>
+                                                <div>这篇影评可能有剧透<br>本文首发于电影幕后故事微信公众号
+                                                （微信号“saymovie”），欢迎关注，看幕后君第一时间为你评新片，
+                                                品经典。 对，我就是要骂《猛虫过江》 看电影之前，我问同事们谁
+                                                愿意陪我一起去看？我请客 大家都说不了不了挺忙的。 我觉得一定
+                                                是诱惑力不够，于是加码说看完我还请吃饭。 大...<br> 
+                                                <a href="#">(展开)</a></div>
+                                                
+                                            </li>
+                                            <li>
+                                                <a>△<span>67</span></a>
+                                                <a>▽<span>8</span></a>
+                                                <a href="#"><span>18</span>回应</a>
+                                            </li>
+                                        </ul>
+                                    </div></li>
+                                <li class='review_item_list'> <img src="images/movie2.webp" alt="">
+                                    <div class='list_info'>
+                                        <ul>
+                                            <li>
+                                                <div class='main_hd'>
+                                                    <img src="images/u_head.jpg" alt="">
+                                                    <a href='#'>电影幕后的故事</a>
+                                                    <span>☆☆☆☆☆</span>
+                                                    <p>2018-06-18 10:33:47</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">今年才过一半，年度最烂就诞生了</a>
+                                            </li>
+                                            <li>
+                                                <div>这篇影评可能有剧透<br>本文首发于电影幕后故事微信公众号
+                                                （微信号“saymovie”），欢迎关注，看幕后君第一时间为你评新片，
+                                                品经典。 对，我就是要骂《猛虫过江》 看电影之前，我问同事们谁
+                                                愿意陪我一起去看？我请客 大家都说不了不了挺忙的。 我觉得一定
+                                                是诱惑力不够，于是加码说看完我还请吃饭。 大...<br> 
+                                                <a href="#">(展开)</a></div>
+                                                
+                                            </li>
+                                            <li>
+                                                <a>△<span>67</span></a>
+                                                <a>▽<span>8</span></a>
+                                                <a href="#"><span>18</span>回应</a>
+                                            </li>
+                                        </ul>
+                                    </div></li>
+                                <li class='review_item_list'> <img src="images/movie2.webp" alt="">
+                                    <div class='list_info'>
+                                        <ul>
+                                            <li>
+                                                <div class='main_hd'>
+                                                    <img src="images/u_head.jpg" alt="">
+                                                    <a href='#'>电影幕后的故事</a>
+                                                    <span>☆☆☆☆☆</span>
+                                                    <p>2018-06-18 10:33:47</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">今年才过一半，年度最烂就诞生了</a>
+                                            </li>
+                                            <li>
+                                                <div>这篇影评可能有剧透<br>本文首发于电影幕后故事微信公众号
+                                                （微信号“saymovie”），欢迎关注，看幕后君第一时间为你评新片，
+                                                品经典。 对，我就是要骂《猛虫过江》 看电影之前，我问同事们谁
+                                                愿意陪我一起去看？我请客 大家都说不了不了挺忙的。 我觉得一定
+                                                是诱惑力不够，于是加码说看完我还请吃饭。 大...<br> 
+                                                <a href="#">(展开)</a></div>
+                                                
+                                            </li>
+                                            <li>
+                                                <a>△<span>67</span></a>
+                                                <a>▽<span>8</span></a>
+                                                <a href="#"><span>18</span>回应</a>
+                                            </li>
+                                        </ul>
+                                    </div></li>
+                                <li class='review_item_list'> <img src="images/movie2.webp" alt="">
+                                    <div class='list_info'>
+                                        <ul>
+                                            <li>
+                                                <div class='main_hd'>
+                                                    <img src="images/u_head.jpg" alt="">
+                                                    <a href='#'>电影幕后的故事</a>
+                                                    <span>☆☆☆☆☆</span>
+                                                    <p>2018-06-18 10:33:47</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">今年才过一半，年度最烂就诞生了</a>
+                                            </li>
+                                            <li>
+                                                <div>这篇影评可能有剧透<br>本文首发于电影幕后故事微信公众号
+                                                （微信号“saymovie”），欢迎关注，看幕后君第一时间为你评新片，
+                                                品经典。 对，我就是要骂《猛虫过江》 看电影之前，我问同事们谁
+                                                愿意陪我一起去看？我请客 大家都说不了不了挺忙的。 我觉得一定
+                                                是诱惑力不够，于是加码说看完我还请吃饭。 大...<br> 
+                                                <a href="#">(展开)</a></div>
+                                                
+                                            </li>
+                                            <li>
+                                                <a>△<span>67</span></a>
+                                                <a>▽<span>8</span></a>
+                                                <a href="#"><span>18</span>回应</a>
+                                            </li>
+                                        </ul>
+                                    </div></li>
+                                <li class='review_item_list'> <img src="images/movie2.webp" alt="">
+                                    <div class='list_info'>
+                                        <ul>
+                                            <li>
+                                                <div class='main_hd'>
+                                                    <img src="images/u_head.jpg" alt="">
+                                                    <a href='#'>电影幕后的故事</a>
+                                                    <span>☆☆☆☆☆</span>
+                                                    <p>2018-06-18 10:33:47</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">今年才过一半，年度最烂就诞生了</a>
+                                            </li>
+                                            <li>
+                                                <div>这篇影评可能有剧透<br>本文首发于电影幕后故事微信公众号
+                                                （微信号“saymovie”），欢迎关注，看幕后君第一时间为你评新片，
+                                                品经典。 对，我就是要骂《猛虫过江》 看电影之前，我问同事们谁
+                                                愿意陪我一起去看？我请客 大家都说不了不了挺忙的。 我觉得一定
+                                                是诱惑力不够，于是加码说看完我还请吃饭。 大...<br> 
+                                                <a href="#">(展开)</a></div>
+                                                
+                                            </li>
+                                            <li>
+                                                <a>△<span>67</span></a>
+                                                <a>▽<span>8</span></a>
+                                                <a href="#"><span>18</span>回应</a>
+                                            </li>
+                                        </ul>
+                                    </div></li>
+                                <li class='review_item_list'> <img src="images/movie2.webp" alt="">
+                                    <div class='list_info'>
+                                        <ul>
+                                            <li>
+                                                <div class='main_hd'>
+                                                    <img src="images/u_head.jpg" alt="">
+                                                    <a href='#'>电影幕后的故事</a>
+                                                    <span>☆☆☆☆☆</span>
+                                                    <p>2018-06-18 10:33:47</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">今年才过一半，年度最烂就诞生了</a>
+                                            </li>
+                                            <li>
+                                                <div>这篇影评可能有剧透<br>本文首发于电影幕后故事微信公众号
+                                                （微信号“saymovie”），欢迎关注，看幕后君第一时间为你评新片，
+                                                品经典。 对，我就是要骂《猛虫过江》 看电影之前，我问同事们谁
+                                                愿意陪我一起去看？我请客 大家都说不了不了挺忙的。 我觉得一定
+                                                是诱惑力不够，于是加码说看完我还请吃饭。 大...<br> 
+                                                <a href="#">(展开)</a></div>
+                                                
+                                            </li>
+                                            <li>
+                                                <a>△<span>67</span></a>
+                                                <a>▽<span>8</span></a>
+                                                <a href="#"><span>18</span>回应</a>
+                                            </li>
+                                        </ul>
+                                    </div></li>
+                                <li class='review_item_list'> <img src="images/movie2.webp" alt="">
+                                    <div class='list_info'>
+                                        <ul>
+                                            <li>
+                                                <div class='main_hd'>
+                                                    <img src="images/u_head.jpg" alt="">
+                                                    <a href='#'>电影幕后的故事</a>
+                                                    <span>☆☆☆☆☆</span>
+                                                    <p>2018-06-18 10:33:47</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">今年才过一半，年度最烂就诞生了</a>
+                                            </li>
+                                            <li>
+                                                <div>这篇影评可能有剧透<br>本文首发于电影幕后故事微信公众号
+                                                （微信号“saymovie”），欢迎关注，看幕后君第一时间为你评新片，
+                                                品经典。 对，我就是要骂《猛虫过江》 看电影之前，我问同事们谁
+                                                愿意陪我一起去看？我请客 大家都说不了不了挺忙的。 我觉得一定
+                                                是诱惑力不够，于是加码说看完我还请吃饭。 大...<br> 
+                                                <a href="#">(展开)</a></div>
+                                                
+                                            </li>
+                                            <li>
+                                                <a>△<span>67</span></a>
+                                                <a>▽<span>8</span></a>
+                                                <a href="#"><span>18</span>回应</a>
+                                            </li>
+                                        </ul>
+                                    </div></li>
+                                <li class='review_item_list'> <img src="images/movie2.webp" alt="">
+                                    <div class='list_info'>
+                                        <ul>
+                                            <li>
+                                                <div class='main_hd'>
+                                                    <img src="images/u_head.jpg" alt="">
+                                                    <a href='#'>电影幕后的故事</a>
+                                                    <span>☆☆☆☆☆</span>
+                                                    <p>2018-06-18 10:33:47</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">今年才过一半，年度最烂就诞生了</a>
+                                            </li>
+                                            <li>
+                                                <div>这篇影评可能有剧透<br>本文首发于电影幕后故事微信公众号
+                                                （微信号“saymovie”），欢迎关注，看幕后君第一时间为你评新片，
+                                                品经典。 对，我就是要骂《猛虫过江》 看电影之前，我问同事们谁
+                                                愿意陪我一起去看？我请客 大家都说不了不了挺忙的。 我觉得一定
+                                                是诱惑力不够，于是加码说看完我还请吃饭。 大...<br> 
+                                                <a href="#">(展开)</a></div>
+                                                
+                                            </li>
+                                            <li>
+                                                <a>△<span>67</span></a>
+                                                <a>▽<span>8</span></a>
+                                                <a href="#"><span>18</span>回应</a>
+                                            </li>
+                                        </ul>
+                                    </div></li>
+                                <li class='review_item_list'> <img src="images/movie2.webp" alt="">
+                                    <div class='list_info'>
+                                        <ul>
+                                            <li>
+                                                <div class='main_hd'>
+                                                    <img src="images/u_head.jpg" alt="">
+                                                    <a href='#'>电影幕后的故事</a>
+                                                    <span>☆☆☆☆☆</span>
+                                                    <p>2018-06-18 10:33:47</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <a href="#">今年才过一半，年度最烂就诞生了</a>
+                                            </li>
+                                            <li>
+                                                <div>这篇影评可能有剧透<br>本文首发于电影幕后故事微信公众号
+                                                （微信号“saymovie”），欢迎关注，看幕后君第一时间为你评新片，
+                                                品经典。 对，我就是要骂《猛虫过江》 看电影之前，我问同事们谁
+                                                愿意陪我一起去看？我请客 大家都说不了不了挺忙的。 我觉得一定
+                                                是诱惑力不够，于是加码说看完我还请吃饭。 大...<br> 
+                                                <a href="#">(展开)</a></div>
+                                                
+                                            </li>
+                                            <li>
+                                                <a>△<span>67</span></a>
+                                                <a>▽<span>8</span></a>
+                                                <a href="#"><span>18</span>回应</a>
+                                            </li>
+                                        </ul>
+                                    </div></li>
+                            </ul>
+                        </div>
+                        <div class="paginator">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- 豆瓣广告 -->
+            <div id="aside">
+                <div class='ad1_img'>
+                <img src="images/ad1.png" alt="">
+                </div>
+                <div class="db_book">
+                    <img src="images/db_book.jpg" alt="">
+                    <div class='db_book_info'>
+                        <p><a href="#">爱、性别、婚姻的秘密,玛赞·莎塔碧漫画小说来袭</a></p>
+                        <p>豆瓣书店</p>
+                    </div>
+                </div>
+            </div>
+            <div id='extra'>
+                <a href="#"><img src="images/ad2.jpg" alt=""></a>
+            </div>
+            <!-- 豆瓣广告结束 -->
+        </div>
+        <div id="footer">
+            <div class="fleft">
+                <span>© 2005－2018 douban.com, all rights reserved 北京豆网科技有限公司</span>
+            </div>
+            <div class="fright">
+                <ul>
+                    <li><a href="#">关于豆瓣</a>·</li>
+                    <li><a href="#">在豆瓣工作</a>·</li>
+                    <li><a href="#">联系我们</a>·</li>
+                    <li><a href="#">免责声明</a>·</li>
+                    <li><a href="#">帮助中心</a>·</li>
+                    <li><a href="#">移动应用</a>·</li>
+                    <li><a href="#">豆瓣广告</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+	<script type="text/javascript" src="js/cityTemplate.js"></script>
+</body>
+</html>

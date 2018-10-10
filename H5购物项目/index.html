@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入的初始化css fullpage css -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="css/myH5Page.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <!-- 360°汽车旋转 -->
+    <script src="js/circlr.min.js"></script>
+    <script src="js/fullPage.js"></script>
+</head>
+<body>
+<a href="#"class='go'>
+    <img src="images/t1ldiffkjfxxxzhxzd-101-101.png" alt="">
+</a>
+<a href="#" class='move'>
+    <img src="images/next.png" class='next next_undown' alt="">
+</a>
+<div id="fullPage">
+    <!-- 第一屏 -->
+    <div class="section section1">
+        <img src="images/t1wsqsfgnaxxxmjxp6-470-50.png" class='up_down' >
+        <img src="images/t1xccqfflgxxxild.png" class='sofa_up_down'>
+        <img src="images/t1iakufbxxxxctz4tl-824-274.png" alt="">
+    </div>
+    <!-- 第二屏 -->
+
+    <div class="section section2">
+        <div class="computer" >
+            <div class="search move">
+                <img src="images/search-words.png"class='search-words' alt="">
+            </div>
+            <img src="images/search-02-1.png" class='search-02-1'alt="">
+            <img src="images/goods-441-218.png" class='goods' alt="">
+            <!-- 沙发 -->
+            <img src="images/shirt-02-207-166.png" class='shirt-02' alt="">
+            <!-- 遮盖层,挡住沙发 -->
+            <div class="cover move"></div>
+        </div>
+        <img src="images/words-01-361-25.png" class='words-01' alt="">
+        <img src="images/words-02.png" class='words-02' alt="">
+    </div> 
+    <!-- 第三屏 -->
+
+    <div class="section section3">
+    <div class="main move">
+        <div class="select move">
+            <img src="images/img-01.gif" class='img-01' alt="">
+            <img src="images/img-01-a.gif" class='img-01-a' alt="">
+            <img src="images/btn-01.gif" class='btn-01'alt="">
+            <img src="images/btn-01-a.gif" class='btn-01-a' alt="">
+        </div>
+        <img src="images/shirt-02-207-166.png" class='shirt-02-1'alt="">
+        <img src="images/t1f.png" class='t1f' alt="">
+    </div>
+    </div>  
+    <!-- 第四屏 -->
+
+    <div class="section section4">
+        <img src="images/cloud.png"class='cloud' alt="">
+        <img src="images/words-04.png" class = 'words-04'alt="">
+        <img src="images/words-04-a.png" class = 'words-04-a' alt="">
+        <div class='shop-car move'>
+            <img src="images/car.png" class='car' alt="">
+            <img src="images/t1f.png" class='t1f-1'>
+        </div>
+        <div class="info move">
+            <img src="images/t1.png" alt="">
+            <img src="images/t1sqosfx8bxxa9wx_i-173-47.png" class='info-1' alt="">
+        </div>
+    </div>
+    <!-- 第五屏 -->
+
+    <div class="section section5">
+        <img src="images/t1h1atfbtxxxauw33d-541-28.png" class='word-card' alt="">
+        <div class='cards move'>
+            <img src="images/t1b2mrfo8cxxxfselu-358-221.png" class='bank-card' alt="">
+            <img src="images/t1puypfatexxajuujj-139-130.png"  class='card-node' alt="">
+        </div>
+        <div class="overflow">
+        <img src="images/t1c8gpfenexxav8lkd-205-819.png" class='mouse1' alt="">
+        <img src="images/t1wbktfddaxxav8lkd-205-819.png" class='mouse2' alt="">
+        <img src="images/t10zesfg4axxxdhbd4-170-375.png" class='hand' alt="">
+        </div>
+        <img src="images/t1f.png" class = 'tif-2'alt="">
+
+    </div>
+    <!-- 第六屏 -->
+
+    <div class="section section6 move">
+        <img src="images/box.png" class='box' alt="">
+        <img src="images/women.png" class='women' alt="">
+        <img src="images/a-goods.png" class='a-goods' alt="">
+        <img src="images/men.png" class ='men' alt="">
+
+        <div class='truck-address move'>
+            <img src="images/truck.png" class='truck' alt="">
+            <img src="images/address.png" class='address' alt="">
+        </div>
+        <img src="images/words-05.png" class= 'words-05' alt="">
+        <img src="images/words-06.png" class= 'words-06' alt="">
+        <img src="images/cloud.png" class='cloud-1'alt="">
+        <img src="images/cloud.png" class='cloud-2'alt="">
+        <img src="images/door.png" class='door' alt="">
+
+    </div>
+    <!-- 第七屏 -->
+
+    <div class="section section7">
+        <div class="stars move"></div>
+        <img src="images/praise.png" class='praise'alt="">
+    </div>
+    <!-- 第八屏 -->
+
+    <div class="section section8">
+        <div class='container'>
+            <div id="circlr">
+                <div id="loader">
+                </div>
+            </div>
+        <script>
+        // 准备74张图片
+            for(var i = 1; i <= 74; i++){
+                // 创建图片
+                var img = $("<img data-src='picture/"+ i + ".png'/>");
+                //追加到circle里面
+                $('#circlr').append(img);//prepend内部的前面添加,append 内部的后面添加
+            }
+    
+        </script>
+        </div>
+   <script type="text/javascript">
+    $(function(){
+        var crl = circlr('circlr',{
+            scroll: true, //滚动滚轮也能旋转
+            loader: 'loader'
+        })
+    })
+    </script>
+    
+    </div>
+    
+    
+    <!-- 第九屏 -->
+    <div class="section section9">
+        <a href="#" class='go-shopping move'>
+            <img src="images/start-shopping.gif" class='go-shopping-g' alt="">
+            <img src="images/start-shopping.png" class='go-shopping-p' alt="">
+            <img src="images/again.png" class='again' alt="">
+        </a>
+        <img src="images/hand.png"class='hand-08' alt="">
+    </div>
+</div>
+</body>
+</html>

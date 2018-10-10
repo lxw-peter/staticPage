@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    div {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+    </style>
+</head>
+<body>
+    <div>1</div>
+    <script>
+        var div = document.querySelector('div');
+        // 手指接触屏幕
+        div.addEventListener('touchstart',function(e){
+            console.log('toucheStart');
+        })
+        //滑动事件
+        div.addEventListener('touchmove',function(e){
+            console.log('touchmove');
+        })  
+        //手指停止接触屏幕
+        div.addEventListener('touchend',function(e){
+            console.log('touchend');
+        })  
+        // 当一些更高级别的事件发生的时候（如电话接入或者弹出信息）
+        // 会取消当前的touch操作，即触发touchcancel。一般会在touchcancel
+        // 时暂停游戏、存档等操作。
+        div.addEventListener('touchcancel',function(e){
+      
+        })      
+    </script>
+</body>
+</html>

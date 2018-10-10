@@ -1,0 +1,331 @@
+
+body,div,ul,li,ol,input,a,h1,h2,p{margin: 0;padding: 0;}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+  
+}
+a:hover {
+    cursor: pointer;
+}
+input {
+    border: none;
+}
+/* 顶部全局导航栏 */
+#global-nav {
+    width: 100%;height: 28px;
+    background-color: #545652;
+    font-size: 12px;
+    overflow: hidden;
+}
+#global-nav a{
+    color: #D5D5D5;
+    line-height: 28px;
+
+}
+#global-nav .db .top-nav-dbapp a ,
+#global-nav .db .top-nav-dbinfo a{
+    float: right;
+    margin-right: 25px;   
+}
+#global-nav .db .item ul{
+    margin-left: 12px;
+}
+#global-nav .db .item li {
+    float: left;
+    margin-right: 24px;
+}
+#global-nav .db a:hover {
+    color: #fff;
+}
+/* 全局导航栏结束 */
+/* 豆瓣电影页面导航栏 */
+.nav {
+    width: 100%;
+    height: 115px;
+    background-color: #F0F3F5;
+    margin-bottom: 40px;
+}
+.nav-wrapper {
+    width: 100%;
+    height: 74px;
+    border-bottom: 1px solid #E3EBEC;
+    
+
+}
+.container {
+    width: 1040px;
+    margin: 0 auto;
+    
+}
+/* logo */
+    .nav .nav-wrapper .container .logo{
+    width: 145px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 20px;
+    float: left;
+}
+.logo a {
+    font-size: 30px;
+    font-weight: 500;
+    color: #27a;
+    display: block;
+
+}
+/* logo部分结束 */
+/* 搜索框 */
+.container form {
+    width: 505px;
+    height: 30px;
+    margin: 20px 0 0 15px;
+    float: left;
+    border-bottom: 1px solid #ccc;
+    border-radius: 3px;           
+    overflow: hidden;
+}
+.container input[type=text] {
+    float: left;
+    width: 455px;
+    height: 29px;
+    background-color: #fff;
+    padding-left: 15px;
+    margin-right: -2px;
+}
+.container input[type=submit] {
+    float: left;
+    width: 35px;
+    height: 30px;
+    background: url(../images/nav_mv_bg.png) 0 -40px no-repeat ;
+    cursor: pointer;    
+}
+/* 搜索框结束 */
+/* 豆瓣电影二级导航 */
+.nav-secondary {
+    width: 100%;
+    height: 40px;
+    line-height: 40px
+}
+.nav-secondary .nav-item {
+    width: 1040px;
+    height: 100%;
+    margin: 0 auto;
+}
+.nav-secondary .nav-item li {
+    float: left;
+    margin-right: 30px;
+}
+.nav-secondary li a {
+    color: #3594C9;
+    font-size: 14px;
+    }
+.nav-secondary li a:hover {
+    background-color: #3594C9;
+    color: #fff;
+}
+/* 豆瓣电影二级导航结束 */
+/* 页面主题部分开始 */
+#wrapper {
+    width: 1040px;
+    margin: 0 auto;
+}
+
+.article {
+    width: 675px;
+    float: left;
+    padding-right: 40px;
+}
+.article .header {
+    height: 43px;
+}
+.article .header h1 {
+    font-size: 26px;
+    line-height: 1.1;
+    padding-bottom: 15px;
+    font-weight: bold;
+    color: #494949;
+}
+.article .movie-ad {
+    width: 675px;
+    height: 112px;
+    margin-bottom: 25px;
+}
+.hs h2 {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #072;
+    padding-bottom: 10px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+.hs h2 a {
+    margin-left: 10px;
+    color: #37a;
+    font-size: 13px;
+}
+/* 电影列表 */
+.lists {
+    /*   letter-spacing 属性增加或减少字符间的空白（字符间距）。
+该属性定义了在文本字符框之间插入多少空间。由于字符字形通常比其字符框要窄，
+指定长度值时，会调整字母之间通常的间隔。因此，normal 就相当于值为 0。
+注释：允许使用负值，这会让字母之间挤得更紧。 */
+    letter-spacing: -0.31em;
+    margin-left: -25px;
+}
+
+.lists .list-item {
+    display: inline-block;
+    width: 115px;
+    height: 247px;
+    background-color: #fff;
+    margin: 0 0 32px 25px;
+    text-align: center;
+}
+.list-item .poster{
+    width: 115px;
+    height: 161px;
+    overflow: hidden;
+}
+.poster img {
+    width: 115px;
+}
+.list-item a {
+    color: #333;
+    font-size: 13px;
+   
+}
+
+
+.list-item .title {
+    overflow: hidden;
+    text-overflow: ellipsis;/* 超出部分用省略号 */
+    white-space: nowrap;
+}
+.list-item .title a {
+    height: 24px;
+    line-height: 24px;
+    word-spacing: normal;
+}
+.list-item a,
+.list-item .staring{
+    font-size: 13px; 
+    letter-spacing: normal;   
+}
+.list-item .staring {
+    color:#e09015;
+    height: 19px;
+    margin-bottom: 5px;
+}
+/* 星级评分样式设定 */
+.list-item .staring .rating-start {
+    display: inline-block;
+    height: 11px;
+    width: 55px;
+    background:url(../images/ic_rating_s.png) no-repeat;
+    margin-left: 16px;
+}
+.list-item .sbtn {
+    padding: 0 10px;
+}
+.list-item .sbtn a {
+    display: block;
+    padding: 0 10px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid#D9D9D9;
+    background-color: #F1F1F1;
+    border-radius: 2px;
+}
+.article .more {
+    width: 100%;
+    height: 36px;
+    margin-bottom: 32px;
+    background-color: #F5F5F5;
+    text-align: center;
+    font-size: 12px;
+    line-height: 30px;
+    color: #336699;
+    cursor: pointer;
+}
+.article .more:hover {
+    background-color: #eee;
+}
+
+.coming-soon {
+    padding-top: 20px;
+}
+#aside {
+    float: right;
+    width: 300px;
+    height: 370px;
+}
+#aside .ad1_img {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 20px;
+}
+#aside .db_book {
+    width: 280;
+    height: 80px;
+    background-color: #F9F9F9;
+    padding: 10px;
+}
+#aside .db_book img {
+    height: 80px;
+    float: left;
+}
+#aside .db_book_info {
+    
+    width: 165px;
+    margin: 10px 20px 20px 115px;
+}
+#aside .db_book_info p:first-child {
+    margin: 10px 0;
+}
+#aside .db_book_info p a {
+    font-size: 12px;
+    color: #3377AA;
+  
+}
+#aside .db_book_info p {
+    font-size: 12px;
+    color: #999999;
+    
+}
+
+/* 页面主题部分结束*/
+
+
+/* 页脚开始 */
+
+#footer {
+    width: 1040px;
+    height: 34px;
+    margin: 0 auto; 
+    margin-top: 40px;
+    border-top: 1px dashed #ccc;
+    font-size: 13px;
+    line-height: 40px;
+
+}
+#footer .fleft {
+    float: left;
+    color: #999;
+}
+#footer .fright{
+    float: right;
+}
+#footer .fright li {
+    float: left;
+    
+}
+#footer .fright li a {
+    padding-left: 3px;
+    padding-right: 3px; 
+}
+#footer .fright li:last-child a{
+    padding-right: 0;
+}

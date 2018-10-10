@@ -1,0 +1,537 @@
+/* 最小宽度和高度,防止过度缩放以致变形 */
+html,body,.section {
+    min-width : 1000px;
+    min-height: 600px;
+}
+.go {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    z-index: 10;
+}
+.next {
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    z-index: 100;
+    /* display: none; */
+}
+/* 第一屏制作start */
+.section1 {
+    position: relative;
+	background: #fadd67 url(../images/t1fpyqfltdxxaiulhh-990-600.png) no-repeat center bottom;
+}
+.section1 img:first-child {
+    position: absolute;
+    top: 10%;
+    right: 20%;
+}
+.section1 img:nth-child(2) {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    margin-left: -200px;
+}
+.section1 img:last-child {
+    position: absolute;
+    bottom: 150px;
+    left: 40%;
+    margin-left:-230px;
+}
+/* 第一屏制作end */
+
+/* 第二屏制作start */
+.section2 {
+	z-index: 2;
+    background: #84a2d4 url(../images/t1zdgpfi8exxca6rfn-2000-600.png) no-repeat center bottom;
+}
+.computer {
+    width: 900px;
+    height: 500px;
+    position: absolute;
+    bottom: 0px;
+    left:50%;
+    transform: translateX(-36%);
+    /* background: rgba(0,0,0,0.3) ; */
+}
+.search {
+    width: 222px;
+    height: 45px;
+    background: url(../images/search.png) no-repeat;
+    position: absolute;
+    right:30px;
+    bottom: 300px;
+    z-index: 10;
+    display: none;
+}
+.search-words{
+    position: absolute;
+    right: 32px;
+    top: 2px;
+    opacity: 0;
+}
+.search-02-1 {
+    position: absolute;
+    right: 450px;
+    bottom: 300px;
+    display: none;
+}
+.goods {
+    height: 50px;
+    position: absolute;
+    bottom: 215px;
+    left: 410px;
+    display: none;
+   
+}
+.shirt-02 {
+    position: absolute;
+    width: 100px;
+    bottom: 345px;
+    left: 215px;
+    z-index: 4;
+    display: none;
+}
+.cover {
+    position: absolute;
+    width: 105px;
+    height: 105px;
+    background-color: #fff;
+    bottom: 328px;
+    left: 213px;
+    display: none;
+    z-index: 3;
+}
+.words-01,
+.words-02 {
+    position: absolute;
+    bottom: 600px;
+    left: 40%;
+}
+.words-02 {
+    opacity: 0;
+}
+
+/* 第二屏制作end */
+
+
+/* 第三屏制作start */
+.section3 {
+	z-index: 1;/* 修复第四屏倾斜沙发t1f 无法显示出来的bug */
+    background: #ef674d url(../images/main.png) no-repeat center bottom;
+}
+.main {
+    width: 800px;
+    height: 600px;
+    /* background: rgba(0,0,0,.3); */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.img-01,
+.img-01-a {
+    position: absolute;
+    bottom: 165px;
+    right: 65px;
+}
+.btn-01,
+.btn-01-a {
+    position: absolute;
+    bottom: 80px;
+    right: 140px;
+}
+.img-01-a,
+.btn-01-a {
+    opacity: 0;
+}
+.t1f{
+    position: absolute;
+    bottom: 200px;
+    left: 165px;
+    display: none;
+    /* z-index: 10; */
+}
+.shirt-02-1 {
+    position: absolute;
+    bottom: 250px;
+    left: 165px;
+    display: none;
+}
+
+/* 第三屏制作end */
+
+/* 第四屏制作start */
+.section4 {
+    
+    background: #fed url(../images/t1iresfnxaxxca6rfn-2000-600.png) no-repeat center bottom;
+}
+.cloud {
+    position: absolute;
+    right: 300px;
+    bottom: 600px;
+}
+.words-04,
+.words-04-a {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 500px;
+}
+.words-04-a {
+    opacity: 0;
+}
+.shop-car {
+    width: 407px;
+    height: 346px;
+    position: absolute;
+    bottom: 50px;
+    left: 30%;
+}
+.car {
+    position: absolute;
+    z-index: 3;
+}
+.t1f-1 {
+    position: absolute;
+    bottom: 210px;
+    left: 160px;
+    display: none;
+}
+.info {
+    position: absolute;
+    width: 283px;
+    height: 270px;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* display: none; */
+    opacity: 0;
+
+}
+.info-1 {
+    position: absolute;
+    bottom: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+/* 第四屏制作end */
+
+/* 第五屏制作start */
+.section5 {
+	z-index: 2;
+    background: #d04759 url(../images/t1yisqfa4exxa3gmkg-2000-1500.png);
+    perspective: 5000;
+    -webkit-perspective: 500;
+}
+.overflow {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    overflow: hidden;
+}
+.word-card {
+	position: absolute;
+	top: 100px;
+	left: 200px;
+    opacity: 0;
+}
+.cards {
+	width: 358px;
+	height: 221px;
+	position: absolute;
+	bottom: 200px;
+	left: 20%;
+    
+}
+.bank-card {
+    z-index: 20;
+    position: absolute; /* 给次元素设置position后,z-index才生效 */
+}
+.card-node {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 15;
+}
+.mouse1,
+.mouse2 {
+    /* height: 700px; */
+	position: absolute;
+	bottom: 200px;
+	right: 20%;
+}
+.mouse2 {
+    opacity: 0;
+}
+.hand {
+    position: absolute;
+    bottom: -375px;
+    right: calc(20% + 55px);
+}
+.tif-2 {
+    position: absolute;
+    bottom: 100%;
+    left: 22%;
+    display: none;
+    z-index: 10;
+}
+
+/* 第五屏制作end */
+
+/* 第六屏制作start */
+.section6 {
+    /* z-index: 1; */
+	background: #84d9ed url(../images/t1dvj.fn0gxxb0_fua-2500-600.png) no-repeat 25% 100%;
+}
+.cloud-1 {
+    position: absolute;
+    left: 5%;
+    bottom: 60%;
+    z-index: 2;
+}
+.cloud-2 {
+    position: absolute;
+    right: 10%;
+    bottom: 80%;
+    z-index: 2;
+}
+.box {
+    position: absolute;
+    bottom: 600px;
+    left: 10%;
+    z-index: 20;
+}
+.truck-address {
+    width:221px;
+    height: 122px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 30;
+    transform: translateX(-50%);
+
+}
+.truck {
+    position: absolute;
+    /* z-index: 30; */
+}
+.address {
+    position: absolute;
+    bottom: 112px;
+    right: 10px;
+    display: none;
+}
+.men {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    height: 30px;
+    transform: translateX(-50%);
+    display: none;
+}
+.words-05,
+.words-06 {
+    position: absolute;
+    bottom: 50%;
+    left: 40%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+.women {
+    position: absolute;
+    right: 285px;
+    bottom: 120px;
+    height: 50px;
+    display: none;
+    z-index: 3;
+    display: none;
+}
+.a-goods {
+    position: absolute;
+    bottom: 420px;
+    right: 25%;
+    display: none;
+}
+.door {
+    position: absolute;
+    right: 285px;
+    bottom: 115px;
+    z-index: 1;
+    display: none;
+}
+/* 第六屏制作end */
+
+/* 第七屏制作start */
+.section7 {
+	background: #8ac060 url(../images/t1wf1tfctaxxa3gmkg-2000-1500.png) no-repeat 50% 100%;
+}
+.stars {
+    /* width: 130px; */
+    height: 20px;
+    background: url('../images/star.png') no-repeat;
+    position: absolute;
+    bottom: 439px;
+    left: 50%;
+    margin-left: -295px;
+    background-size: 97px;
+}
+.praise {
+    bottom: 382px;
+    left:50%;
+    margin-left: -289px;
+    position: absolute;
+    display: none;
+}
+
+
+/* 第七屏制作end */
+
+
+/* 第八屏制作start */
+#circlr{
+    cursor: move;
+    margin: 0 auto;
+    min-height:  100px;
+    position: relative;
+}
+#circlr #loader {
+    background: url(../images/loader.gif) center center no-repeat;
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+/* 第八屏制作end */
+
+
+/* 第九屏制作start */
+.section9 {
+	background: url(../images/ksgw.png);
+}
+.go-shopping-g,
+.go-shopping-p {
+    position: absolute;
+    bottom: 400px;
+    left: 40%;
+    /* transform: translateX(-50%); */
+}
+.go-shopping-g {
+    display: none;
+}
+.again {
+    position: absolute;
+    bottom: 50%;
+    left: 40%;
+    margin-left: 400px;
+    
+}
+.hand-08 {
+    position: absolute;
+}
+
+
+
+/* 动画特效制作 */
+
+/* 继续往下动画 */
+.next_undown {
+    animation: next-p 1s linear infinite;
+}
+@keyframes next-p {
+    50% {
+        bottom: 130px;
+    }
+    100% {
+        bottom: 100px;
+    }
+}
+
+
+
+
+
+
+/* 第一屏飞艇动效 */
+.up_down {
+    animation: fly 3s linear infinite;
+}
+@keyframes fly {/* 类似于js的声明函数function */
+    0% {
+        top: 10%;/* 可以省略初始值 */
+    }
+    50% {
+        top: 15%;
+    }
+    100% {
+        top: 10%;
+    }
+}
+
+
+
+/* 第一屏沙发动效 */
+
+.sofa_up_down {
+    animation: fly2 2.5s linear infinite;
+}
+@keyframes fly2 {/* 类似于js的声明函数function */
+    50% {  /* 可以省略初始值 */
+        bottom: 43%;
+    }
+    100% {
+        bottom: 40%;
+    }
+}
+
+/* 第四屏云朵动效 */
+.cloud {
+    animation: cloud 20s linear infinite;
+}
+@keyframes cloud {
+    0% {
+        right: 300px;
+    }
+    50% {
+        right: 900px;
+    }
+    100% {
+        right: 300px;
+    }
+
+}
+/* 第五屏文字旋转 */
+ .words-card-a {
+	animation: words5 3s forwards;
+	/* animation-fill-mode: forwards;  让我们的动画保持最后一帧状态 不循环 */
+}
+@keyframes words5 {
+    0% {
+        opacity: 0;
+    }
+	100% {
+		opacity: 1;
+		transform: translateZ(100px) rotateY(360deg);
+	}
+}
+
+.cloud-2 {
+    animation: cloud2 30s linear infinite;
+}
+@keyframes cloud2 {
+    50% {
+        right: 50%;
+    }
+    100% {
+        right: 10%;
+    }
+} 

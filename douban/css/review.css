@@ -1,0 +1,88 @@
+.review_article {
+    width: 675px;
+    padding-right: 40px;
+    float: left;
+
+}
+.review_article .header {
+    height: 43px;
+    padding-bottom: 15px;
+}
+.review_article .header h1{
+    font-size: 26px;
+    line-height: 1.1;
+    font-weight: bold;
+    color: #494949;
+}
+.review_article .header a {
+    font-size: 13px;
+}
+.review_item_list {
+    width: 675px;
+    height: 205px;
+    border-top: 1px solid #ccc;
+    padding: 20px 0 20px 0;
+    margin-top: 20px;
+}
+.review_item_list img{
+    width: 75px;
+    float: left;
+}
+.review_item_list .list_info {
+    width: 580px;
+    margin-left: 95px;
+}
+.review_item_list .main_hd{
+    width: 100%;
+    height: 24px;
+    font-size: 13px;
+    line-height: 24px;
+}
+.review_item_list .main_hd img {
+    width: 24px;
+    vertical-align: top;
+
+}
+.review_item_list .main_hd a {
+    color: #666699;
+}
+.review_item_list .main_hd span {
+    color: #ffac2d;
+    display: inline-block;
+    vertical-align: top;
+}
+.review_item_list .main_hd p {
+    display: inline;
+    vertical-align: top;
+}
+.list_info li:nth-child(2) a {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 10px 0 10px 0;
+    display: inline-block;
+    color: #3377aa;
+}
+
+.list_info li:nth-child(3) div {
+    color: #494949;
+    font-size: 13px;
+}
+.list_info li:last-child {
+    height: 21px;
+    margin-top: 18px;
+    line-height: 21px;
+    color: #3377aa;
+   
+}
+.list_info li:last-child a {
+    padding: 4px 6px;
+    background-color: #f0f7f9;
+}
+.list_info li:last-child a:last-child{
+    background-color: #fff;
+    padding: 4px 0;
+}
+.list_info li:last-child a:last-child:hover {
+    background-color: #3377aa;
+    color: #fff;
+}
