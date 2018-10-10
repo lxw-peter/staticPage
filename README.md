@@ -2,21 +2,19 @@
 
 1. 学成网
 
-   ![1539137930290](C:\Users\lxw19\AppData\Roaming\Typora\typora-user-images\1539137930290.png)
+   ![](https://ws1.sinaimg.cn/large/0061BkIsly1fw2xbcupqqj31gv0q84g5.jpg)
 
-   ![1539137960368](C:\Users\lxw19\AppData\Roaming\Typora\typora-user-images\1539137960368.png)
-
-   ![1539138082409](C:\Users\lxw19\AppData\Roaming\Typora\typora-user-images\1539138082409.pn
+   ![](https://ws1.sinaimg.cn/large/0061BkIsly1fw2xbensu4j31gq0hytfo.jpg)
 
 2. H5购物项目
 
-   ![1539138339840](C:\Users\lxw19\AppData\Roaming\Typora\typora-user-images\1539138339840.png)
+   ![](https://ws1.sinaimg.cn/large/0061BkIsly1fw2xbhlh9sj31hc0qkgpm.jpg)
 
-   ![1539138390374](C:\Users\lxw19\AppData\Roaming\Typora\typora-user-images\1539138390374.png)
+   ![](https://ws1.sinaimg.cn/large/0061BkIsly1fw2xbinwusj31gz0qeq4l.jpg)
 
    动效制作
 
 3. 豆瓣电影
 
-   ![1539138436362](C:\Users\lxw19\AppData\Roaming\Typora\typora-user-images\1539138436362.png)注：根据豆瓣api获取影视信息
+   ![](https://ws1.sinaimg.cn/large/0061BkIsly1fw2xbk5nm8j31hc0sw7rs.jpg)注：根据豆瓣api获取影视信息
 
